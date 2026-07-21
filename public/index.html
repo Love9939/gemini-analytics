@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pirsch Clone Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  
+  <!-- Header Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="white"/>
+        <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 12L12 17L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h1>www.choudharyvastralya.in</h1>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="active">Overview</a>
+      <a href="#">Dashboard</a>
+      <a href="#">Funnels</a>
+      <a href="#">Sessions</a>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+    
+    <!-- Top Metrics Row -->
+    <section class="metrics-row">
+      <div class="metric-card active">
+        <div class="metric-title">Unique Visitors</div>
+        <div class="metric-value" id="val-unique-visitors">0</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Page Views</div>
+        <div class="metric-value" id="val-pageviews">0</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Sessions</div>
+        <div class="metric-value" id="val-sessions">0</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Bounce Rate</div>
+        <div class="metric-value" id="val-bounce-rate">0%</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Session Duration</div>
+        <div class="metric-value" id="val-session-duration">0s</div>
+      </div>
+    </section>
+
+    <!-- Main Chart -->
+    <section class="chart-container">
+      <canvas id="mainChart"></canvas>
+    </section>
+
+    <!-- Breakdown Grid -->
+    <section class="breakdown-grid">
+      
+      <!-- Card 1: Pages -->
+      <div class="breakdown-card">
+        <div class="card-header">
+          <div class="tabs">
+            <span class="tab active">Pages</span>
+            <span class="tab">Entry</span>
+            <span class="tab">Exit</span>
+          </div>
+        </div>
+        <div class="card-content" id="list-pages">
+          <!-- Rows will be injected here -->
+        </div>
+      </div>
+
+      <!-- Card 2: Referrers -->
+      <div class="breakdown-card">
+        <div class="card-header">
+          <div class="tabs">
+            <span class="tab active">Referrers</span>
+            <span class="tab">Channel</span>
+          </div>
+        </div>
+        <div class="card-content" id="list-referrers"></div>
+      </div>
+
+      <!-- Card 3: Sources -->
+      <div class="breakdown-card">
+        <div class="card-header">
+          <div class="tabs">
+            <span class="tab active">Sources</span>
+            <span class="tab">Mediums</span>
+            <span class="tab">Campaigns</span>
+          </div>
+        </div>
+        <div class="card-content" id="list-sources"></div>
+      </div>
+
+      <!-- Card 4: Locations -->
+      <div class="breakdown-card">
+        <div class="card-header">
+          <div class="tabs">
+            <span class="tab active">Countries</span>
+            <span class="tab">Regions</span>
+            <span class="tab">Cities</span>
+            <span class="tab">Languages</span>
+          </div>
+        </div>
+        <div class="card-content" id="list-countries"></div>
+      </div>
+
+      <!-- Card 5: OS / Devices -->
+      <div class="breakdown-card">
+        <div class="card-header">
+          <div class="tabs">
+            <span class="tab active">OS</span>
+            <span class="tab">Browsers</span>
+            <span class="tab">Platforms</span>
+            <span class="tab">Screens</span>
+          </div>
+        </div>
+        <div class="card-content" id="list-os"></div>
+      </div>
+
+      <!-- Card 6: Weekdays Dummy -->
+      <div class="breakdown-card">
+        <div class="card-header">
+          <div class="tabs">
+            <span class="tab active">Weekdays</span>
+          </div>
+        </div>
+        <div class="card-content" style="display:flex;align-items:center;justify-content:center;color:#666;">
+          Heatmap (Coming soon)
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/dashboard.js"></script>
+</body>
+</html>
