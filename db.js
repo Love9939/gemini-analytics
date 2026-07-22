@@ -10,9 +10,7 @@ const clickhouse = createClient({
 
 async function initDB() {
   try {
-    await clickhouse.exec({
-      query: `DROP TABLE IF EXISTS pageviews`,
-    });
+    // Removed DROP TABLE to preserve data in production
 
     await clickhouse.exec({
       query: `
