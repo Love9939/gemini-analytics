@@ -1,4 +1,4 @@
-# Gemini Analytics 🚀
+# Gemini Analytics 
 
 An open-source, privacy-first, cookieless web analytics engine built from scratch to clone the sleek aesthetic and powerful aggregation of Pirsch Analytics.
 
